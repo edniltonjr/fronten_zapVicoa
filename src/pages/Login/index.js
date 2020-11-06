@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
-import { Link as RouterLink } from "react-router-dom";
+// import { Link as RouterLink } from "react-router-dom";
 
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
-import Link from "@material-ui/core/Link";
-import Grid from "@material-ui/core/Grid";
+// import Link from "@material-ui/core/Link";
+// import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
@@ -16,6 +16,7 @@ import Container from "@material-ui/core/Container";
 import { i18n } from "../../translate/i18n";
 
 import { AuthContext } from "../../context/Auth/AuthContext";
+import logoImg from '../../assets/logo.png'
 
 // const Copyright = () => {
 // 	return (
@@ -39,7 +40,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	avatar: {
 		margin: theme.spacing(1),
-		backgroundColor: theme.palette.secondary.main,
+		width: '100px',
 	},
 	form: {
 		width: "100%", // Fix IE 11 issue.
@@ -65,9 +66,7 @@ const Login = () => {
 		<Container component="main" maxWidth="xs">
 			<CssBaseline />
 			<div className={classes.paper}>
-				<Avatar className={classes.avatar}>
-					<LockOutlinedIcon />
-				</Avatar>
+					<img src={logoImg} alt="logoVicoa" className={classes.avatar}/>
 				<Typography component="h1" variant="h5">
 					{i18n.t("login.title")}
 				</Typography>
@@ -111,7 +110,7 @@ const Login = () => {
 					>
 						{i18n.t("login.buttons.submit")}
 					</Button>
-					<Grid container>
+					 {/* <Grid container>
 						<Grid item>
 							<Link
 								href="#"
@@ -122,7 +121,7 @@ const Login = () => {
 								{i18n.t("login.buttons.register")}
 							</Link>
 						</Grid>
-					</Grid>
+					</Grid>  // Link para criar uma conta  */}
 				</form>
 			</div>
 			<Box mt={8}>{/* <Copyright /> */}</Box>

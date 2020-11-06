@@ -46,6 +46,8 @@ const useAuth = () => {
 				localStorage.removeItem("username");
 				localStorage.removeItem("profile");
 				localStorage.removeItem("userId");
+				localStorage.removeItem("supervisor");
+
 				api.defaults.headers.Authorization = undefined;
 				setIsAuth(false);
 			}
@@ -72,6 +74,8 @@ const useAuth = () => {
 			localStorage.setItem("username", data.username);
 			localStorage.setItem("profile", data.profile);
 			localStorage.setItem("userId", data.userId);
+			localStorage.setItem("supervisor", data.supervisor);
+
 			api.defaults.headers.Authorization = `Bearer ${data.token}`;
 
 			setIsAuth(true);
